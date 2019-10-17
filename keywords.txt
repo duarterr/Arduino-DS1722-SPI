@@ -1,0 +1,23 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DS1722	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getResolution	KEYWORD2
+setResolution	KEYWORD2
+getMode	KEYWORD2
+setMode	KEYWORD2
+requestConversion	KEYWORD2
+getTemperature	KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
+
+DS1722_MODE_ONESHOT	LITERAL1
+DS1722_MODE_CONTINUOUS	LITERAL1
