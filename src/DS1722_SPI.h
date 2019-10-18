@@ -21,6 +21,10 @@
 // Defines
 /* ------------------------------------------------------------------------------------------- */
 
+// Code version
+#define DS1722_CODE_NAME		"DS1722_SPI"
+#define DS1722_CODE_VERSION		"1.0"
+
 // DS1722 SPI clock speed
 #define DS1722_SPI_CLOCK        4000000
 
