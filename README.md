@@ -4,12 +4,13 @@
 
 You will need to connect the SERMODE pin to VDDD to enable SPI mode.
 
-## Credits
+## Author
 
 Renan R. Duarte <duarte.renan@hotmail.com>
 
+## Documentation
+On-line documention for the APIs is available [here](https://duarterr.github.io/Arduino-DS1722-SPI)
+
 ## License
 
-This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
-
-This library is distributed in the hope that it will be useful, 1but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+Released under [Creative Commons Share-alike 4.0.](https://creativecommons.org/licenses/by-sa/4.0/)
