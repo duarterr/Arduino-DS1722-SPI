@@ -2,7 +2,7 @@
 // GetTempC - This example gets the DS1722 temperature in Celsius
 // Author:  Renan R. Duarte
 // E-mail:  duarte.renan@hotmail.com
-// Date:    October 14, 2019
+// Date:    October 19, 2019
 //
 // Released into the public domain
 /* ------------------------------------------------------------------------------------------- */
@@ -37,10 +37,7 @@ void setup()
   while (!Serial);
 
   Serial.println();
-  Serial.print("Code date: ");
-  Serial.print(__DATE__);
-  Serial.print(" - ");
-  Serial.println(__TIME__);
+  Serial.printf ("%s library v%s \n", DS1722_CODE_NAME, DS1722_CODE_VERSION); 
 
   /* ----------------------------------------------------------------------------------------- */
 

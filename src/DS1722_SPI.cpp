@@ -1,11 +1,19 @@
-/* ------------------------------------------------------------------------------------------- */
-// DS1722 - Library for interfacing the DS1722 Digital Thermometer using SPI
-// Version: 1.0
-// Author: Renan R. Duarte
-// E-mail: duarte.renan@hotmail.com
-// Date:   October 8, 2019
-// Released into the public domain
-/* ------------------------------------------------------------------------------------------- */
+/*!
+@file DS1722_SPI.cpp
+
+@mainpage Library for interfacing the DS1722 Digital Thermometer using SPI
+
+@brief 
+This is the documentation for Maxim Integrated DS1722 Digital Thermometer for the
+Arduino platform. It is designed specifically to work with SPI interface.
+
+@version 1.0
+@date October 8, 2019
+
+@author Renan Duarte - duarte.renan@hotmail.com
+
+@copyright Released under [Creative Commons Share-alike 4.0.] (https://creativecommons.org/licenses/by-sa/4.0/)
+*/
 
 /* ------------------------------------------------------------------------------------------- */
 // Includes
@@ -18,6 +26,11 @@
 /* ------------------------------------------------------------------------------------------- */
 // Constructor
 /* ------------------------------------------------------------------------------------------- */
+
+/*!
+@brief Initialises device with SPI
+@param PinCs - Device chip select pin
+*/
 
 DS1722::DS1722(unsigned int PinCs)
 {
@@ -38,11 +51,12 @@ DS1722::DS1722(unsigned int PinCs)
 // Functions definitions
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        writeByte
-// Description: Writes a byte to DS1722 memory
-// Arguments:   Address - Register to be written
-//              Data - Byte to be written
-// Returns:     none
+/*!
+@brief Writes a byte to device memory
+@param Address - Register to be written
+@param Data	- Byte to be written
+@returns None
+*/
 
 void DS1722::writeByte(unsigned char Address, unsigned char Data)
 {
@@ -67,10 +81,11 @@ void DS1722::writeByte(unsigned char Address, unsigned char Data)
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        readByte
-// Description: Reads a byte from DS1722 memory
-// Arguments:   Address - Register to be read
-// Returns:     Byte read
+/*!
+@brief Reads a byte from device memory
+@param Address - Register to be read
+@returns Byte read
+*/
 
 unsigned char DS1722::readByte (unsigned char Address)
 {
@@ -101,10 +116,11 @@ unsigned char DS1722::readByte (unsigned char Address)
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        getResolution
-// Description: Gets the current resolution of DS1722
-// Arguments:   none
-// Returns:     Resolution (8, 9, 10, 11 or 12)
+/*!
+@brief Gets the current resolution of device
+@param None
+@returns Resolution (8, 9, 10, 11 or 12)
+*/
 
 unsigned char DS1722::getResolution ()
 {
@@ -128,10 +144,11 @@ unsigned char DS1722::getResolution ()
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        setResolution
-// Description: Sets the resolution of DS1722
-// Arguments:   Resolution (8, 9, 10, 11 or 12)
-// Returns:     false if new resolution is equal to current or true on completion
+/*!
+@brief Sets the resolution of device
+@param Resolution (8, 9, 10, 11 or 12)
+@returns False if new resolution is equal to current. True on completion
+*/
 
 bool DS1722::setResolution (unsigned char Resolution)
 {
@@ -168,10 +185,11 @@ bool DS1722::setResolution (unsigned char Resolution)
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        getMode
-// Description: Gets the current conversion mode of DS1722
-// Arguments:   none
-// Returns:     DS1722_MODE_CONTINUOUS (logic 0) or DS1722_MODE_ONESHOT (logic 1)
+/*!
+@brief Gets the current conversion mode of device
+@param None
+@returns #DS1722_MODE_CONTINUOUS (logic 0) or #DS1722_MODE_ONESHOT (logic 1)
+*/
 
 bool DS1722::getMode ()
 {
@@ -181,10 +199,11 @@ bool DS1722::getMode ()
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        setMode
-// Description: Sets the conversion mode of DS1722
-// Arguments:   DS1722_MODE_CONTINUOUS (logic 0) or DS1722_MODE_ONESHOT (logic 1)
-// Returns:     false if new mode is equal to current or true on completion
+/*!
+@brief Sets the conversion mode of device
+@param #DS1722_MODE_CONTINUOUS (logic 0) or #DS1722_MODE_ONESHOT (logic 1)
+@returns False if new mode is equal to current. True on completion
+*/
 
 bool DS1722::setMode (bool Mode)
 {
@@ -211,10 +230,11 @@ bool DS1722::setMode (bool Mode)
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        requestConversion
-// Description: Requests a temperature conversion (only in one shot mode)
-// Arguments:   none
-// Returns:     false if mode is set to continuous or true on completion
+/*!
+@brief Requests a temperature conversion (only in one shot mode)
+@param None
+@returns False if mode is set to continuous. True on completion
+*/
 
 bool DS1722::requestConversion ()
 {
@@ -235,10 +255,11 @@ bool DS1722::requestConversion ()
 
 /* ------------------------------------------------------------------------------------------- */
 
-// Name:        getTemperature
-// Description: Returns the value of the temperature registers of DS1722 in Celsius
-// Arguments:   none
-// Returns:     Temperature in Celsius (-55C to 120C)
+/*!
+@brief Returns the value of the temperature registers of device in Celsius
+@param None
+@returns Temperature in Celsius (-55C to 120C)
+*/
 
 float DS1722::getTemperature ()
 {
